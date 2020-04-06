@@ -3,73 +3,106 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
+use App\Barang;
 
 class BarangController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-    	// mengambil data dari table barang
-    	$barang = DB::table('barang')->get();
-
-    	// mengirim data barang ke view index
-    	return view('index',['barang' => $barang]);
-
+        $barangs = Barang::latest()->paginate(5);
+        return view('barang.index', compact('barangs'))
+                  ->with('i', (request()->input('page',1) -1)*5);
     }
-    // method untuk menampilkan view form tambah barang
-    public function tambah()
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
-
-	// memanggil view tambah
-	return view('tambah');
-
+        return view('barang.create');
     }
-    // method untuk insert data ke table barang
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-	// insert data ke table barang ke DB
-	DB::table('barang')->insert([
-		'nama_barang' => $request->nama_barang,
-		'jenis_barang' => $request->jenis_barang,
-		'harga_barang' => $request->harga_barang,
-		'stok_barang' => $request->stok_barang,
-		'nama_perusahaan' => $request->nama_perusahaan
-	]);
-	// alihkan halaman ke halaman barang
-	return redirect('/barang');
+        $request->validate([
+          'namaBarang' => 'required',
+          'stokBarang' => 'required'
+        ]);
 
+        Barang::create($request->all());
+        return redirect()->route('barang.index')
+                        ->with('success', 'new barang created successfully');
     }
-    // method untuk edit data barang
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $barang = Barang::find($id);
+        return view('barang.detail', compact('barang'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit($id)
     {
-	// mengambil data barang berdasarkan id yang dipilih
-	$barang = DB::table('barang')->where('barang_id',$id)->get();
-	// passing data barang yang didapat ke view edit.blade.php
-	return view('edit',['barang' => $barang]);
+        $barang = Barang::find($id);
+        return view('barang.edit', compact('barang'));
+    }
 
-    }
-    // update data barang
-    public function update(Request $request)
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
     {
-	// update data barang
-	DB::table('barang')->where('barang_id',$request->id)->update([
-		'nama_barang' => $request->nama_barang,
-		'jenis_barang' => $request->jenis_barang,
-		'harga_barang' => $request->harga_barang,
-		'stok_barang' => $request->stok_barang,
-		'nama_perusahaan' => $request->nama_perusahaan
-	]);
-	// alihkan halaman ke halaman barang
-	return redirect('/barang');
+        $request->validate([
+        'namaBarang' => 'required',
+        'stokBarang' => 'required'
+      ]);
+      $barang = Barang::find($id);
+      $barang->namaBarang = $request->get('namaBarang');
+      $barang->stokBarang = $request->get('stokBarang');
+      $barang->save();
+      return redirect()->route('barang.index')
+                      ->with('success', 'Barang updated successfully');
     }
-    // method untuk hapus data barang
-    public function hapus($id)
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
     {
-	// menghapus data barang berdasarkan id yang dipilih
-	DB::table('barang')->where('barang_id',$id)->delete();
-		
-	// alihkan halaman ke halaman barang
-	return redirect('/barang');
+        $barang = Barang::find($id);
+        $barang->delete();
+        return redirect()->route('barang.index')
+                        ->with('success', 'Barang deleted successfully');
     }
 }
