@@ -14,9 +14,15 @@ class BarangController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $barangs = Barang::latest()->paginate(10);
         return view('barang.index', compact('barangs'))
                   ->with('i', (request()->input('page',1) -1)*10);
+=======
+        $barangs = Barang::latest()->paginate(5);
+        return view('barang.index', compact('barangs'))
+                  ->with('i', (request()->input('page',1) -1)*5);
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
     }
 
     /**
@@ -40,7 +46,11 @@ class BarangController extends Controller
         $request->validate([
           'namaBarang' => 'required',
           'stokBarang' => 'required',
+<<<<<<< HEAD
           'namaPerusahaan' => 'required'
+=======
+          'jenisBarang' => 'required'
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
         ]);
 
         Barang::create($request->all());
@@ -84,12 +94,20 @@ class BarangController extends Controller
         $request->validate([
         'namaBarang' => 'required',
         'stokBarang' => 'required',
+<<<<<<< HEAD
         'namaPerusahaan' => 'required'
+=======
+        'jenisBarang' => 'required'
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
       ]);
       $barang = Barang::find($id);
       $barang->namaBarang = $request->get('namaBarang');
       $barang->stokBarang = $request->get('stokBarang');
+<<<<<<< HEAD
       $barang->namaPerusahaan = $request->get('namaPerusahaan');
+=======
+      $barang->jenisBarang = $request->get('jenisBarang');
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
       $barang->save();
       return redirect()->route('barang.index')
                       ->with('success', 'Barang updated successfully');
