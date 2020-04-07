@@ -22,8 +22,11 @@
         <th width = "50px"><b>No.</b></th>
         <th width = "300px">Nama Barang</th>
         <th>Stok Barang</th>
+<<<<<<< HEAD
         <th>Harga Barang</th>
 
+=======
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
         <th width = "180px">Action</th>
       </tr>
 
@@ -32,8 +35,11 @@
           <td><b>{{++$i}}.</b></td>
           <td>{{$barang->namaBarang}}</td>
           <td>{{$barang->stokBarang}}</td>
+<<<<<<< HEAD
           <td>{{$barang->hargaBarang}}</td>
 
+=======
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
           <td>
             <form action="{{ route('barang.destroy', $barang->id) }}" method="post">
               <a class="btn btn-sm btn-success" href="{{route('barang.show',$barang->id)}}">Show</a>

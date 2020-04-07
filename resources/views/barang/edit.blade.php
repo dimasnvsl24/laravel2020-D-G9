@@ -30,10 +30,13 @@
           <strong>Stok Barang :</strong>
           <input type="text" name="stokBarang" class="form-control" value="{{$barang->stokBarang}}">
         </div>
+<<<<<<< HEAD
         <div class="col-md-12">
           <strong>Harga Barang :</strong>
           <input type="text" name="hargaBarang" class="form-control" value="{{$barang->hargaBarang}}">
         </div>
+=======
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
 
         <div class="col-md-12">
           <a href="{{route('barang.index')}}" class="btn btn-sm btn-success">Back</a>

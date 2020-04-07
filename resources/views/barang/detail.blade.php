@@ -19,11 +19,14 @@
         </div>
       </div>
       <div class="col-md-12">
+<<<<<<< HEAD
         <div class="form-group">
           <strong>Harga Barang : </strong> {{$barang->hargaBarang}}
         </div>
       </div>
       <div class="col-md-12">
+=======
+>>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
         <a href="{{route('barang.index')}}" class="btn btn-sm btn-success">Back</a>
       </div>
     </div>
