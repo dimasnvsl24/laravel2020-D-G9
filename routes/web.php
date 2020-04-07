@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,19 +10,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//route CRUD
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/barang','BarangController@index');
+Auth::routes();
 
-Route::get('/barang/tambah','BarangController@tambah');
-
-Route::post('/barang/store','BarangController@store');
-
-Route::get('/barang/edit/{id}','BarangController@edit');
-
-Route::post('/barang/update','BarangController@update');
-
-Route::get('/barang/hapus/{id}','BarangController@hapus');
+Route::get('/home', 'HomeController@index')->name('home');
+route::resource('barang','BarangController');

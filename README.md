@@ -1,6 +1,1 @@
-# laravel2020-D-G9
-laravel2020 class D Group 9
-
-Data barang.
-
-Riza, firdausi, Ivan, juandika.
+Simple CRUD (create, Read, Update, Delete) Operation with Laravel 5.7, follow step by step how to perform CRUD App from our website http://www.phpsync.com/2018/10/laravel-57-crud-operation-with-example.html
