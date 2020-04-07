@@ -32,8 +32,13 @@
         </div>
 <<<<<<< HEAD
         <div class="col-md-12">
+<<<<<<< HEAD
           <strong>Harga Barang :</strong>
           <input type="text" name="hargaBarang" class="form-control" value="{{$barang->hargaBarang}}">
+=======
+          <strong>Nama Perusahaan :</strong>
+          <input type="text" name="namaPerusahaan" class="form-control" value="{{$barang->namaPerusahaan}}">
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
         </div>
 =======
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172

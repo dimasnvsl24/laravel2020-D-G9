@@ -21,9 +21,14 @@
       <div class="col-md-12">
 <<<<<<< HEAD
         <div class="form-group">
+<<<<<<< HEAD
           <strong>Harga Barang : </strong> {{$barang->hargaBarang}}
         </div>
       </div>
+=======
+          <strong>Nama Perusahaan : </strong> {{$barang->namaPerusahaan}}
+        </div>
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
       <div class="col-md-12">
 =======
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172

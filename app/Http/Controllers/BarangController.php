@@ -47,7 +47,11 @@ class BarangController extends Controller
           'namaBarang' => 'required',
           'stokBarang' => 'required',
 <<<<<<< HEAD
+<<<<<<< HEAD
           'hargaBarang' => 'required'
+=======
+          'namaPerusahaan' => 'required'
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
           'jenisBarang' => 'required'
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
@@ -95,7 +99,11 @@ class BarangController extends Controller
         'namaBarang' => 'required',
         'stokBarang' => 'required',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'hargaBarang' => 'required'
+=======
+        'namaPerusahaan' => 'required'
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
         'jenisBarang' => 'required'
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
@@ -104,7 +112,11 @@ class BarangController extends Controller
       $barang->namaBarang = $request->get('namaBarang');
       $barang->stokBarang = $request->get('stokBarang');
 <<<<<<< HEAD
+<<<<<<< HEAD
       $barang->hargaBarang = $request->get('hargaBarang');
+=======
+      $barang->namaPerusahaan = $request->get('namaPerusahaan');
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
       $barang->jenisBarang = $request->get('jenisBarang');
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172

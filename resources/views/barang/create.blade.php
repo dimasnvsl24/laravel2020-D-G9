@@ -31,8 +31,13 @@
         </div>
         <div class="col-md-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <strong>Harga Barang :</strong>
           <input type="text" name="hargaBarang" class="form-control" placeholder="Harga Barang">
+=======
+          <strong>Nama Perusahaan :</strong>
+          <input type="text" name="namaPerusahaan" class="form-control" placeholder="Nama Perusahaan">
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
           <strong>Jenis Barang :</strong>
           <input type="text" name="jenisBarang" class="form-control" placeholder="Jenis Barang">

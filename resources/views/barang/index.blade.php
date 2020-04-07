@@ -23,8 +23,12 @@
         <th width = "300px">Nama Barang</th>
         <th>Stok Barang</th>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <th>Harga Barang</th>
 
+=======
+        <th>Nama Perusahaan</th>
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
         <th width = "180px">Action</th>
@@ -36,8 +40,12 @@
           <td>{{$barang->namaBarang}}</td>
           <td>{{$barang->stokBarang}}</td>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <td>{{$barang->hargaBarang}}</td>
 
+=======
+          <td>{{$barang->namaPerusahaan}}</td>
+>>>>>>> afcdefe2b4861d45a106868fc04a46a6d467fdde
 =======
 >>>>>>> 31390d9b96fef2b524f10b88863d84abbdb29172
           <td>
