@@ -13,6 +13,7 @@ class Create1555355681975ProductsTable extends Migration
             $table->string('name');
             $table->string('stok')->nullable();
             $table->string('price')->nullable();
+            $table->string('perusahaan')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

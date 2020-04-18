@@ -25,6 +25,7 @@
                         <th>Nama</th>
                         <th>Stok</th>
                         <th>Harga</th>
+                        <th>perusahaan</th>
                         <th>
                             &nbsp;
                         </th>
@@ -44,6 +45,9 @@
                             </td>
                             <td>
                                 {{ $product->price ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->perusahaan ?? '' }}
                             </td>
                             <td>
                                 @can('product_show')

@@ -47,6 +47,15 @@
                     {{ trans('global.product.fields.price_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('price') ? 'has-error' : '' }}">
+                <label for="perusahaan">Perusahaan</label>
+                <input type="perusahaan" id="stok" name="perusahaan" class="form-control" value="{{ old('perusahaan', isset($product) ? $product->perusahaan : '') }}">
+                @if($errors->has('price'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('price') }}
+                    </em>
+                @endif
+                </div>
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
