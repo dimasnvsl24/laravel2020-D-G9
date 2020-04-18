@@ -22,21 +22,9 @@
                         <th width="10">
 
                         </th>
-<<<<<<< HEAD
                         <th>Nama</th>
                         <th>Stok</th>
                         <th>Harga</th>
-=======
-                        <th>
-                            {{ trans('global.product.fields.name') }}
-                        </th>
-                        <th>
-                            {{ trans('global.product.fields.stok') }}
-                        </th>
-                        <th>
-                            {{ trans('global.product.fields.price') }}
-                        </th>
->>>>>>> f97f91ae09456072e045e88a2e3529f3a52fa020
                         <th>
                             &nbsp;
                         </th>
