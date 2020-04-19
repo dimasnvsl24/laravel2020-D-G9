@@ -22,6 +22,19 @@
                 </p>
             </div>
 
+            <div class="form-group {{ $errors->has('jenis_barang') ? 'has-error' : '' }}">
+                <label for="jenis_barang">Jenis Barang</label>
+                <input type="text" id="jenis_barang" name="jenis_barang" class="form-control" value="{{ old('jenis_barang', isset($product) ? $product->jenis_barang : '') }}">
+                @if($errors->has('jenis_barang'))
+                    <em class="invalid-feedback">
+                        {{ $errors->first('jenis_barang') }}
+                    </em>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.product.fields.jenis_barang_helper') }}
+                </p>
+            </div>
+
             <div class="form-group {{ $errors->has('stok') ? 'has-error' : '' }}">
                 <label for="stok">Stok</label>
                  <input type="text" id="stok" name="stok" class="form-control" value="{{ old('stok', isset($product) ? $product->stok : '') }}">

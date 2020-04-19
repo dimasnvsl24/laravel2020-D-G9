@@ -22,6 +22,7 @@ class Product extends Model
         'updated_at',
         'deleted_at',
         'stok',
+        'jenis_barang',
         'perusahaan',
     ];
 }

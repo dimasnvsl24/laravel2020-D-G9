@@ -27,10 +27,26 @@
                 </tr>
                 <tr>
                     <th>
+                        Jenis Barang
+                     </th>
+                    <td>
+                        {{ $product->jenis_barang }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
                      Harga
                       </th>
                     <td>
-                        ${{ $product->price }}
+                        {{ $product->price }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                     Perusahaan
+                      </th>
+                    <td>
+                        {{ $product->perusahaan }}
                     </td>
                 </tr>
             </tbody>
